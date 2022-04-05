@@ -1,6 +1,7 @@
 package ru.skypro;
 
 public class Employee {
+
     private String name;
     private String departament;
     private int salari;
@@ -13,7 +14,9 @@ public class Employee {
         this.name = name;
         this.departament = departament;
         this.salari = salari;
+
     }
+
 
     public String getName() {
         return name;
@@ -31,7 +34,9 @@ public class Employee {
         return id;
     }
 
-    public static int getCount() { return count; }
+    public static int getCount() {
+        return count;
+    }
 
     public void setDepartament(String departament) {
         this.departament = departament;
@@ -43,7 +48,7 @@ public class Employee {
 
     @Override
     public String toString() {
-        return "Employee{" +
+        return "{" +
                 "ФИО '" + name + '\'' +
                 ", Отдел'" + departament + '\'' +
                 ", Зарплата " + salari +
