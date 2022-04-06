@@ -55,4 +55,23 @@ public class Employee {
                 ", id=" + id +
                 '}';
     }
+
+    public static void printListOfEmployee(Employee[] employees) {
+        for (int i = 0; i < employees.length; i++) {
+            if (employees[i] == null) {
+                break;
+            }
+            System.out.println((i + 1) + ". " + employees[i].getName());
+        }
+    }
+
+    public static void printSumSalary(Employee[] employees) {
+        int sum = 0;
+        for (int i = 0; i < employees.length; i++) {
+            sum += employees[i].salari;
+        }
+        System.out.println("Общая сумма затрат на зарплату " + sum + " руб. в месяц");
+    }
+
+
 }
