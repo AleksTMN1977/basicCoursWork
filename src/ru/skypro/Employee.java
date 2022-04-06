@@ -69,9 +69,42 @@ public class Employee {
         int sum = 0;
         for (int i = 0; i < employees.length; i++) {
             sum += employees[i].salari;
+            if (employees[i] == null) {
+                break;
+            }
         }
         System.out.println("Общая сумма затрат на зарплату " + sum + " руб. в месяц");
     }
 
+    public static void printAverageSalary(Employee[] employees) {
+        int sum = 0;
+        int averageSalary = 0;
+        for (int i = 0; i < employees.length; i++) {
+            sum += employees[i].salari;
+            if (i == employees.length - 1) {
+                averageSalary = sum / employees.length;
+            }
+        }
+        System.out.println("Средняя месячная зарплата " + averageSalary + " RUR");
+    }
 
+    public static void printMinSalary(Employee[] employees) {
+        int min = employees[0].getSalari();
+        for (int i = 0; i < employees.length; i++) {
+            if (min > employees[i].getSalari()) {
+                min = employees[i].getSalari();
+            }
+        }
+        System.out.println("Минимальная зарплата " + min + " RUR");
+    }
+    public static void printMaxSalary(Employee[] employees) {
+        int max = employees[0].getSalari();
+        for (int i = 0; i < employees.length; i++) {
+            if (max < employees[i].getSalari()) {
+                max = employees[i].getSalari();
+            }
+        }
+        System.out.println("Максимальная зарплата " + max + " RUR");
+    }
 }
+
